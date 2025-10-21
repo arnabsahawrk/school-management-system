@@ -31,7 +31,7 @@ class School:
         elif marks >= 0 and marks < 33:
             return "F"
         else:
-            return "Invalid Marks"
+            return "Invalid"
 
     @staticmethod
     def grade_to_value(grade):
@@ -43,7 +43,29 @@ class School:
             "C": 2.00,
             "D": 1.00,
             "F": 0.00,
-            "Invalid Marks": None,
+            "Invalid": None,
         }
 
         return grade_map[grade]
+
+    @staticmethod
+    def value_to_grade(value):
+        if value == 5.00:
+            return "A+"
+        elif value >= 4.00 and value < 5.00:
+            return "A"
+        elif value >= 3.50 and value < 4.00:
+            return "A-"
+        elif value >= 3.00 and value < 3.50:
+            return "B"
+        elif value >= 2.00 and value < 3.00:
+            return "C"
+        elif value >= 1.00 and value < 2.00:
+            return "D"
+        elif value == 0.00:
+            return "F"
+        else:
+            return "Invalid"
+
+    def __repr__(self) -> str:
+        return ""
