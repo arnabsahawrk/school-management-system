@@ -32,7 +32,11 @@ class Student(Person):
             point = School.grade_to_value(grade=grade)
             sum += point
 
-        gpa = sum / len(self.subjects_grade)
+        if len(self.subjects_grade):
+            gpa = sum / len(self.subjects_grade)
+        else:
+            gpa = 0.00
+
         self.grade = School.value_to_grade(gpa)
 
     @property
