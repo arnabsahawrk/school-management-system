@@ -69,53 +69,37 @@ class School:
             return "Invalid"
 
     def __repr__(self) -> str:
-        print("*******************************")
-        print("\t\tALL CLASSROOMS")
-        print("*******************************")
+        print()
+        print("\tALL CLASSROOMS")
+        print()
         for key in self.classrooms.keys():
             print(key.upper())
 
         print()
 
         for key, value in self.classrooms.items():
-            print("*******************************")
-            print(f"\t\tSTUDENTS OF CLASSROOM {key.upper()}")
-            print("*******************************")
+            print()
+            print(f"\tSTUDENTS OF CLASSROOM {key.upper()}")
+            print()
             for student in value.students:
                 print(f"{student.name}")
 
         print()
 
         for key, value in self.classrooms.items():
-            print("*******************************")
-            print(f"\t\tSUBJECTS OF CLASSROOM {key.upper()}")
-            print("*******************************")
+            print()
+            print(f"\tSUBJECTS OF CLASSROOM {key.upper()}")
+            print()
             for subject in value.subjects:
                 print(f"{subject.name}")
 
-        print()
-
-        teachers = set()
-        for value in self.teachers.values():
-            teachers.add(value)
-        print("*******************************")
-        print("\t\tALL TEACHERS")
-        print("*******************************")
-        for teacher in teachers:
-            print(teacher.upper())
-
-        print()
-
-        print("*******************************")
-        print("\t\tALL STUDENT RESULTS")
-        print("*******************************")
         for key, value in self.classrooms.items():
-            print("*******************************")
-            print(f"\t\tRESULTS OF CLASSROOM {key.upper()}")
-            print("*******************************")
+            print()
+            print(f"\tRESULTS OF CLASSROOM {key.upper()}")
             for student in value.students:
-                print(f"\t\tStudent Name: {student.name}")
-                print("*******************************")
+                print()
+                print(f"\tStudent Name: {student.name}")
+                print()
                 for subject, mark in student.subjects_mark.items():
                     print(
                         f"Subject: {subject}, Mark:{mark}, "

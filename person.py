@@ -13,7 +13,7 @@ class Teacher(Person):
         super().__init__(name)
 
     def evaluate_exam(self):
-        return random.randint(0, 100)
+        return random.randint(33, 100)
 
 
 class Student(Person):
